@@ -1,2 +1,5 @@
 # django_netflix_clone
-tutorial from FreeCodeCamp
+
+![Netflix Clone](/static/readme.jpg "Neflix Clone")
+
+#### tutorial from FreeCodeCamp
