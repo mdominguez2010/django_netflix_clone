@@ -14,7 +14,7 @@ MOVIE_CHOICES = (
 
 
 class CustomUser(AbstractUser):
-	profiles = models.ManyToManyField("Profile", null = True, blank = True)
+	profiles = models.ManyToManyField("Profile")
 	
 	
 class Profile(models.Model):
@@ -24,7 +24,7 @@ class Profile(models.Model):
 	
 
 class Movie(models.Model):
-	title: = models.CharField(max_length = 225)
+	title:str = models.CharField(max_length = 225)
 	description = models.TextField(blank = True, null = True)
 	created = models.DateTimeField(auto_now_add = True)
 	uuid = models.UUIDField(default = uuid.uuid4)
