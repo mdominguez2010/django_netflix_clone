@@ -2,4 +2,4 @@
 
 ![Netflix Clone](/static/readme.jpg "Neflix Clone")
 
-#### tutorial from FreeCodeCamp
+#### [tutorial](https://youtu.be/gbyYXgiSgdM) from [FreeCodeCamp](https://freecodecamp.org)
