@@ -1,5 +1,4 @@
-python==3.9
-django
+django==2.1
 django-allauth
 gunicorn 
 whitenoise 
