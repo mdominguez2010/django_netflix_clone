@@ -25,7 +25,7 @@ SECRET_KEY = '$d6%u-0b2yym)nqvd#^jxk@m@rqn8bfbhxh2*kz!tbivh9&-c0'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['Djangonetflixclone-env.eba-4zbcam7y.us-west-1.elasticbeanstalk.com']
 
 
 # Application definition
