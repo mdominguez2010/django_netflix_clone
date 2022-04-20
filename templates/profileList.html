@@ -9,7 +9,7 @@
 {% block content %}
 
 	{% include 'partials/navbar.html' %}
-	<section class='bg-primary_black min-h-screen bg-cover py-20 md:py-0 flex-col flex justify-center items-center' style="background-image:url('{% static 'background_netflix.jpg'%}')">
+	<section class='bg-primary_black min-h-screen bg-cover py-20 md:py-0 flex-col flex justify-center items-center'>
 		<h2 class="text-center font-medium text-5xl my-4 text-gray-100">
 			Who's watching ?
 		</h2>
@@ -18,7 +18,7 @@
 			
 			{% for profile in profiles %}
 			
-				<a href="#">
+				<a href="{% url 'core:watch' profile_id=profile.uuid %}">
 				
 					<div class="w-32 h-32 m-4 flex flex-col justify-center align-center text-center bg-blue-500 rounded-md cursor-pointer">
 						
@@ -38,12 +38,19 @@
 			{% endfor %}
 			
 			
-
 		</div>
 		<div class="flex justify-center items-center">
-			<button class="px-4 py-2 rounded-md outline-none bg-gray-400 text-gray-100">
-				Add A New Profile
-			</button>
+			
+			<a href="{% url 'core:profile_create' %}">
+				
+				<button class="px-4 py-2 rounded-md outline-none bg-gray-400 text-gray-100">
+					
+					Add A New Profile
+					
+				</button>
+				
+			</a>
+			
 		</div>
 	</section>
 	
