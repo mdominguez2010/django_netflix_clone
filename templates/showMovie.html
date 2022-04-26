@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Netflix - Play Movie
+Movie
 {% endblock title %}
 
 {% block content %}
@@ -23,6 +23,6 @@ Netflix - Play Movie
         
         const video_param = parseInt(url.searchParams.get("epi")) ? parseInt(url.searchParams.get("epi")) : 0
 
-        videoEl.setAttribute('src',`http:/localhost:8000/media/${movie_data[video_param].file}`)
+        videoEl.setAttribute('src',`https://1b50ace300434cc4b876b6756cc1864c.vfs.cloud9.us-west-1.amazonaws.com/media/${movie_data[video_param].file}`)
     </script>
 {% endblock content %}

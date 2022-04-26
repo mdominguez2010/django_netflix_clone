@@ -1,4 +1,4 @@
-from core.views import Home, ProfileList, ProfileCreate, Watch, ShowMovieDetail,ShowMovie
+from core.views import Home, ProfileList, ProfileCreate, Watch, ShowMovieDetail, ShowMovie
 from django.urls import path
 
 app_name='core'
