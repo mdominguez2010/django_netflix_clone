@@ -11,6 +11,7 @@ class Home(View):
         if request.user.is_authenticated:
             return redirect(to='/profile/')
         return render(request,'index.html')
+        
 
 @method_decorator(login_required,name='dispatch')
 class ProfileList(View):
@@ -24,7 +25,8 @@ class ProfileList(View):
 
         return render(request,'profileList.html',{
             'profiles':profiles
-        })
+        }
+    )
 
 
 @method_decorator(login_required,name='dispatch')
@@ -34,7 +36,8 @@ class ProfileCreate(View):
 
         return render(request,'profileCreate.html',{
             'form':form
-        })
+        }
+    )
 
     def post(self,request,*args, **kwargs):
         form=ProfileForm(request.POST or None)
@@ -49,7 +52,8 @@ class ProfileCreate(View):
 
         return render(request,'profileCreate.html',{
             'form':form
-        })
+        }
+    )
 
 @method_decorator(login_required,name='dispatch')
 class Watch(View):
@@ -70,7 +74,8 @@ class Watch(View):
             return render(request,'movieList.html',{
             'movies':movies,
             'show_case':showcase
-            })
+            }
+        )
         except Profile.DoesNotExist:
             return redirect(to='core:profile_list')
 
@@ -84,7 +89,8 @@ class ShowMovieDetail(View):
 
             return render(request,'movieDetail.html',{
                 'movie':movie
-            })
+            }
+        )
         except Movie.DoesNotExist:
             return redirect('core:profile_list')
 
@@ -100,6 +106,7 @@ class ShowMovie(View):
 
             return render(request,'showMovie.html',{
                 'movie':list(movie)
-            })
+            }
+        )
         except Movie.DoesNotExist:
             return redirect('core:profile_list')
